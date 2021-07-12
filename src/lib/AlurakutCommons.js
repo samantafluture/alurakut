@@ -273,7 +273,7 @@ export function OrkutNostalgicIconSet(props) {
               className="OrkutNostalgicIconSet__iconSample"
               src={`https://alurakut.vercel.app/icons/${icon}.svg`}
             />
-            {props[slug] ? props[slug] : 0}
+            {props[slug] ? props[slug] : 3}
           </span>
         </li>
       ))}
@@ -292,7 +292,7 @@ export function OrkutNostalgicIconSet(props) {
               style={{ gridArea: "number" }}
             >
               {[0, 1, 2].map((_, index) => {
-                const isHeartActive = index <= total - 1;
+                const isHeartActive = index <= total - 0;
                 return (
                   <img
                     key={`orkut__icon_set__${slug}_img_${index}`}

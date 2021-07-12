@@ -68,11 +68,10 @@ http://localhost:3000/ (visitar url)
 
 ## Desafios
 
-1. pegar dados da api do github e listar meus seguidores
-
-- instalar axios (yarn add axios)
-
-
-2. tema escuro
+- [x] Pegar os dados da API do GitHub e listar seus seguidores
+- [x] Adicionar quão confiável, legal e sexy você é
+- [x] Separar e organizar o seu código
+- [x] Publicar o seu projeto
+- [x] Deixar o seu projeto com a sua cara
 
 ---
