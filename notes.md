@@ -63,3 +63,16 @@ http://localhost:3000/ (visitar url)
 - no lugar de colocar styled.tag do html
 - colocar entre () o componente já criado que vc quer herdar e modificar
 - escrever entre o `` apenas o código que deseja modificar deste pai
+
+---
+
+## Desafios
+
+1. pegar dados da api do github e listar meus seguidores
+
+- instalar axios (yarn add axios)
+
+
+2. tema escuro
+
+---
