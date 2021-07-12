@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    fundoEscuro: "#0d0d0d",
+    corPrimaria: "#d0d0d0",
   },
 };
 
