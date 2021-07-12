@@ -21,7 +21,7 @@ export default function FriendsList({ quantidade, randomico }) {
           return (
             <FriendsItem
               key={friend.login}
-              url={friend.html_url}
+              html_url={friend.html_url}
               login={friend.login}
               avatar_url={friend.avatar_url}
             />
