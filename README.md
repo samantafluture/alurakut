@@ -2,10 +2,10 @@
 
 ## Imersão React da Alura
 
-Projeto que visa desenvolver (e reviver) o Orkut.
+Projeto que visa desenvolver <i>(e reviver)<i> o Orkut 🤓.
 
 Acompanhe a construção do projeto:
-[Alurakut] (https://alurakut-ten.vercel.app/)
+[Alurakut](https://alurakut-samanta.vercel.app/)
 
 Tecnologias:
 - ReactJS
