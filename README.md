@@ -1,8 +1,14 @@
 # Aulakut
 
-Projeto da Imersão React da Alura.
+## Imersão React da Alura
+
+Projeto que visa desenvolver (e reviver) o Orkut.
+
+Acompanhe a construção do projeto:
+[Alurakut] (https://alurakut-ten.vercel.app/)
 
 Tecnologias:
-- React
+- ReactJS
 - Styled Components
 - Next.js
+- Vercel
