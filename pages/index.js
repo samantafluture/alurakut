@@ -18,27 +18,37 @@ export default function Home() {
     {
       id: "20210308",
       title: "Discografias",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",
+      image:
+        "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",
+      url: "https://www.orkut.br.com/MainCommunity?cmm=11815",
     },
     {
       id: "20200128",
       title: "Happy Pride",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-pride.jpeg?raw=true",
+      image:
+        "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-pride.jpeg?raw=true",
+      url: "https://www.etsy.com/shop/Surpride",
     },
     {
       id: "20210121",
       title: "Clube Arduino",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-arduino.jpeg?raw=true",
+      image:
+        "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-arduino.jpeg?raw=true",
+      url: "https://www.arduino.cc/",
     },
     {
       id: "20200206",
       title: "Amo Montreal",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-montreal.jpeg?raw=true",
+      image:
+        "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-montreal.jpeg?raw=true",
+      url: "https://www.mtl.org/en",
     },
     {
       id: "20191221",
       title: "Modular Synths",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-synth.jpeg?raw=true",
+      image:
+        "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-synth.jpeg?raw=true",
+      url: "https://www.instructables.com/Intro-to-Analog-Synthesizer/",
     },
   ]);
 
@@ -60,7 +70,10 @@ export default function Home() {
           </Box>
           <Box>
             <h2 className="subTitle">O que você deseja fazer?</h2>
-            <CommunityForm comunidades={comunidades} setComunidades={setComunidades} />
+            <CommunityForm
+              comunidades={comunidades}
+              setComunidades={setComunidades}
+            />
           </Box>
         </div>
         <div
