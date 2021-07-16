@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import GitHubService from "../../api/api";
 import FriendsItem from "../FriendsItem";
 
-export default function FriendsList({ quantidade, randomico }) {
+export default function FriendsList() {
   const [friends, setFriends] = useState([]);
   const friendsBox = friends.slice(0, 6);
 
   useEffect(() => {
-    GitHubService.getFollowers(quantidade, randomico).then((friendsList) =>
+    GitHubService.getFollowers().then((friendsList) =>
       setFriends(friendsList)
     );
   }, []);
@@ -22,9 +22,9 @@ export default function FriendsList({ quantidade, randomico }) {
           return (
             <FriendsItem
               key={friend.login}
-              html_url={friend.html_url}
-              login={friend.login}
-              avatar_url={friend.avatar_url}
+              url={friend.html_url}
+              username={friend.login}
+              photo={friend.avatar_url}
             />
           );
         })}

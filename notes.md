@@ -75,3 +75,7 @@ http://localhost:3000/ (visitar url)
 - [x] Deixar o seu projeto com a sua cara
 
 ---
+
+# Aula 02
+
+

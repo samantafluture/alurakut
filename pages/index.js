@@ -35,7 +35,7 @@ export default function Home() {
           style={{ gridArea: "profileRelationsArea" }}
         >
           <ProfileRelationsBoxWrapper>
-            <FriendsList quantidade={6} randomico={true}/>
+            <FriendsList/>
           </ProfileRelationsBoxWrapper>
           <Box>
             <h2 className="smallTitle">Comunidades</h2>
@@ -45,3 +45,5 @@ export default function Home() {
     </>
   );
 }
+
+console.log("olá");
