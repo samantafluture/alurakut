@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     background-color: #ffd1dc;
+    // background-image: url('../src/assets/bg-cables.jpg');
   }
 
   img {

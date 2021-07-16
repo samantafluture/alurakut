@@ -16,11 +16,6 @@ export default function Home() {
   const [username, setUsername] = useState([]);
   const [comunidades, setComunidades] = useState([
     {
-      id: "20210716",
-      title: "Eu odeio acordar cedo",
-      image: "https://alurakut.vercel.app/capa-comunidade-01.jpg",
-    },
-    {
       id: "20210308",
       title: "Discografias",
       image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",

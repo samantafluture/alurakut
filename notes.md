@@ -93,7 +93,7 @@ http://localhost:3000/ (visitar url)
 
 - [x] Fazer aparecer foto e nome do usuário no menu mobile
 - [x] Componentização (comunidades, form)
-- [] Criar comunidades extras
+- [x] Criar comunidades extras
 - [] Modificar o fundo, personalizado, img
 
 ---
