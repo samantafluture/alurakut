@@ -78,4 +78,17 @@ http://localhost:3000/ (visitar url)
 
 # Aula 02
 
+## preventDefault()
+
+- é necessário porque não estamos usando server side
+- não queremos que a página dê refresh após o form seja enviado
+- pois senão nossos dados somem
+- queremos guardar isso no estado da página
+- ela só acontece enquanto o usuário está fazendo
+- a alteração em js
+
+## programação declarativa, estado
+
+
+
 

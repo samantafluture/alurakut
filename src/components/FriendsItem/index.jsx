@@ -1,6 +1,6 @@
-export default function FriendsItem({ url, photo, username }) {
+export default function FriendsItem({ id, url, photo, username }) {
   return (
-    <li>
+    <li key={id}>
       <a href={url}>
         <img src={photo} alt={username} />
         <span>{username}</span>

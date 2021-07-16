@@ -1,3 +1,4 @@
+import { AlurakutProfileSidebarMenuDefault } from "../../lib/AlurakutCommons";
 import Box from "../Box";
 
 function ProfileSidebar(props) {
@@ -9,6 +10,16 @@ function ProfileSidebar(props) {
           style={{ borderRadius: "8px" }}
         />
       </a>
+      <hr />
+
+      <p>
+        <a className="boxLink" href={`https://github.com/${props.username}`}>
+          @{props.username}
+        </a>
+      </p>
+      <hr />
+
+      <AlurakutProfileSidebarMenuDefault />
     </Box>
   );
 }
