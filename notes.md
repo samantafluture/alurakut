@@ -94,12 +94,50 @@ http://localhost:3000/ (visitar url)
 - [x] Fazer aparecer foto e nome do usuário no menu mobile
 - [x] Componentização (comunidades, form)
 - [] Criar comunidades extras
-- [] Deixar o README.md bonitão
 - [] Modificar o fundo, personalizado, img
 
 ---
 
-# Aula extra (API do GitHub)
+# Aula Extra (API do GitHub)
 
+---
 
+## Desafios
 
+- [] Componentização (refatorar maps, list e itens -> códigos repetidos)
+
+---
+
+# Aula Aula 03
+
+---
+
+## Desafios
+
+- []
+- []
+- []
+
+---
+
+# Aula 04
+
+---
+
+## Desafios
+
+- []
+- []
+- []
+
+---
+
+# Aula 05
+
+---
+
+## Desafios
+
+- [] Deixar o README.md bonitão
+
+---
