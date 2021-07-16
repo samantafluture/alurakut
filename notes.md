@@ -92,7 +92,7 @@ http://localhost:3000/ (visitar url)
 ## Desafios
 
 - [x] Fazer aparecer foto e nome do usuário no menu mobile
-- [] Componentização (comunidades, form)
+- [x] Componentização (comunidades, form)
 - [] Criar comunidades extras
 - [] Deixar o README.md bonitão
 - [] Modificar o fundo, personalizado, img

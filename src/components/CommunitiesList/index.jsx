@@ -1,20 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import CommunityItem from "../../components/CommunityItem";
 
-export default function CommunitiesList() {
-  const [comunidades, setComunidades] = useState([
-    {
-      id: "20210716",
-      title: "Eu odeio acordar cedo",
-      image: "https://alurakut.vercel.app/capa-comunidade-01.jpg",
-    },
-    {
-      id: "20210308",
-      title: "Discografias",
-      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",
-    },
-  ]);
-
+export default function CommunitiesList({ comunidades }) {
   return (
     <>
       <h2 className="smallTitle">Comunidades ({comunidades.length})</h2>
@@ -26,7 +13,7 @@ export default function CommunitiesList() {
               url={comunidade.url}
               image={comunidade.image}
               title={comunidade.title}
-            />
+            />  
           );
         })}
       </ul>
