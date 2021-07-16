@@ -11,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     // background-color: #ffd1dc;
-    background-image: url('https://github.com/samantafluture/alurakut/blob/aula2/src/assets/bg-sputnik.jpeg?raw=true');
+    background-image: url('https://github.com/samantafluture/alurakut/blob/aula2/src/assets/bg-gradient.png?raw=true');
+    background-size: cover;
   }
 
   img {
