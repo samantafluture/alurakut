@@ -11,7 +11,7 @@ export default function CommunitiesList() {
     {
       id: "20210308",
       title: "Discografias",
-      image: "../../assets/comunidade-discografias.png",
+      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",
     },
   ]);
 
