@@ -25,6 +25,26 @@ export default function Home() {
       title: "Discografias",
       image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-discografias.png?raw=true",
     },
+    {
+      id: "20200128",
+      title: "Happy Pride",
+      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-pride.jpeg?raw=true",
+    },
+    {
+      id: "20210121",
+      title: "Clube Arduino",
+      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-arduino.jpeg?raw=true",
+    },
+    {
+      id: "20200206",
+      title: "Amo Montreal",
+      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-montreal.jpeg?raw=true",
+    },
+    {
+      id: "20191221",
+      title: "Modular Synths",
+      image: "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-synth.jpeg?raw=true",
+    },
   ]);
 
   useEffect(() => {
@@ -63,5 +83,3 @@ export default function Home() {
     </>
   );
 }
-
-console.log("olá");
