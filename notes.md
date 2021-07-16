@@ -94,11 +94,13 @@ http://localhost:3000/ (visitar url)
 - [x] Fazer aparecer foto e nome do usuário no menu mobile
 - [x] Componentização (comunidades, form)
 - [x] Criar comunidades extras
-- [] Modificar o fundo, personalizado, img
+- [x] Modificar o fundo, personalizado, img
 
 ---
 
 # Aula Extra (API do GitHub)
+
+
 
 ---
 
