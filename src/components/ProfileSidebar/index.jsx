@@ -3,7 +3,7 @@ import Box from "../Box";
 
 function ProfileSidebar(props) {
   return (
-    <Box>
+    <Box as ="aside">
       <a href={`https://github.com/${props.username}`}>
         <img
           src={`https://github.com/${props.username}.png`}

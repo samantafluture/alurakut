@@ -87,8 +87,19 @@ http://localhost:3000/ (visitar url)
 - ela só acontece enquanto o usuário está fazendo
 - a alteração em js
 
-## programação declarativa, estado
+---
 
+## Desafios
+
+- [x] Fazer aparecer foto e nome do usuário no menu mobile
+- [] Componentização (comunidades, form)
+- [] Criar comunidades extras
+- [] Deixar o README.md bonitão
+- [] Modificar o fundo, personalizado, img
+
+---
+
+# Aula extra (API do GitHub)
 
 
 

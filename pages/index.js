@@ -4,6 +4,7 @@ import MainGrid from "../src/components/MainGrid";
 import Box from "../src/components/Box";
 import ProfileSidebar from "../src/components/ProfileSidebar";
 import FriendsList from "../src/components/FriendsList";
+import CommunitiesList from "../src/components/CommunitiesList";
 import GitHubService from "../src/api/api";
 import {
   AlurakutMenu,
@@ -12,11 +13,7 @@ import {
 
 export default function Home() {
   const [username, setUsername] = useState([]);
-  const [comunidades, setComunidades] = useState([{
-    id: '20210716',
-    title: 'Eu odeio acordar cedo',
-    image: 'https://alurakut.vercel.app/capa-comunidade-01.jpg'
-  }]);
+
 
   useEffect(() => {
     GitHubService.getUsername().then((userName) => setUsername(userName));
@@ -78,19 +75,7 @@ export default function Home() {
             <FriendsList />
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
-            <h2 className="smallTitle">Comunidades</h2>
-            <ul>
-              {comunidades.map((comunidade) => {
-                return (
-                  <li key={comunidade.id}>
-                    <a href={`/users/${comunidade.title}`} >
-                      <img src={comunidade.image} />
-                      <span>{comunidade.title}</span>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <CommunitiesList />
           </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>
