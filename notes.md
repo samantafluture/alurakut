@@ -98,24 +98,17 @@ http://localhost:3000/ (visitar url)
 
 ---
 
-# Aula Extra (API do GitHub)
+# Aula Aula 03
 
 
+
+## Aula Extra (API do GitHub)
 
 ---
 
 ## Desafios
 
 - [] Componentização (refatorar maps, list e itens -> códigos repetidos)
-
----
-
-# Aula Aula 03
-
----
-
-## Desafios
-
 - []
 - []
 - []
