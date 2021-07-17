@@ -81,11 +81,11 @@ export default function Home({ quantidade, boxTitle }) {
           style={{ gridArea: "profileRelationsArea" }}
         >
           <ProfileRelationsBoxWrapper>
-            {/* <FriendsList
+            <FriendsList
               boxTitle={"Amigos"}
               quantidade={6}
               followers={username.followers}
-            /> */}
+            />
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
             <CommunitiesList
