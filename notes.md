@@ -98,27 +98,47 @@ http://localhost:3000/ (visitar url)
 
 ---
 
-# Aula Extra (API do GitHub)
-
-
-
----
-
-## Desafios
-
-- [] Componentização (refatorar maps, list e itens -> códigos repetidos)
-
----
-
 # Aula Aula 03
 
+- cms é um gerenciador de conteúdo
+- vamos usar para persistir as comunidades
+
+## fetch api
+
+- consumir dados de api com fetch 
+- recebe uma promise
+- then é das promises => quando está promise for resolvida, faça x
+- json() converte para objeto js (json)
+- isso também retorna uma promessa
+- e daí começamos a trabalhar com encadeamento de promises .then() e ...
+- usar o catch() para erros
+
+fetch('url que queremos acessar').then()
+.json()
+
+## useEffect()
+
+- interceptador de qualquer evento que está acontecendo na página, pelo React
+- colocando a fetch aí dentro, ela fica executando toda vez que ocorre alguma atualização
+- e queremos que ele não faça isso
+- e sim só carregue uma vez, quando a página for inicialmente carregada
+- array de dependência [] no final do hook
+- se deixar vazio, ele atualiza apenas uma vez
+- ou pode colocar algo que vc quer interceptar, para assim atualizar
+
+## DatoCMS
+
+- criar conta e projeto
+- models: definir os esqueletos dos conteúdos que você quer gerenciar
+- vai prover backend padronizado
+
 ---
 
 ## Desafios
 
-- []
-- []
-- []
+- [x] Componentização
+- [x] Terminar de listar seus seguidores através da api do Github;
+- [x] Adicionar suas comunidades no DatoCMS;
 
 ---
 

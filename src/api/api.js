@@ -1,8 +1,14 @@
 export default class GitHubService 
 {
-    static async getFollowers() {
+    static async getFollowers(quantidade = 0) {
         const url = "https://api.github.com/users/samantafluture/followers";
-        const resposta = await fetch(url);
+        const params = new URLSearchParams();
+
+        if (quantidade > 0) {
+            params.append('per_page', quantidade);
+        }
+
+        const resposta = await fetch(url + "?" + params);
         const followers = await resposta.json();
         return followers;
     }

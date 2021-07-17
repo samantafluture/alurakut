@@ -1,30 +1,40 @@
 import React, { useEffect, useState } from "react";
 import GitHubService from "../../api/api";
-import FriendsItem from "../FriendsItem";
+import RelationsItem from "../../components/RelationsItem";
 
-export default function FriendsList() {
+export default function FriendsList({ quantidade, boxTitle, followers }) {
   const [friends, setFriends] = useState([]);
-  const friendsBox = friends.slice(0, 6);
 
   useEffect(() => {
-    GitHubService.getFollowers().then((friendsList) => setFriends(friendsList));
+    GitHubService.getFollowers(quantidade).then((friendsList) =>
+      setFriends(friendsList)
+    );
   }, []);
 
   return (
     <>
-      <h2 className="smallTitle">Amigos ({friends.length})</h2>
+      <h2 className="smallTitle">
+        {boxTitle}
+        <a className="boxLink" href={`/`}>
+          &nbsp;({followers})
+        </a>
+      </h2>
       <ul>
-        {friendsBox.map((friend) => {
+        {friends.map((friend) => {
           return (
-            <FriendsItem
+            <RelationsItem
               id={friend.login}
               url={friend.html_url}
-              username={friend.login}
-              photo={friend.avatar_url}
+              title={friend.login}
+              image={friend.avatar_url}
             />
           );
         })}
       </ul>
+      <hr />
+      <a className="boxLink" href={`/`}>
+        Ver todos
+      </a>
     </>
   );
 }

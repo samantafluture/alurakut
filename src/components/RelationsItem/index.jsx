@@ -1,4 +1,4 @@
-export default function CommunityItem({ id, url, image, title }) {
+export default function RelationsItem({ id, url, image, title }) {
     return (
       <li key={id}>
         <a href={url}>

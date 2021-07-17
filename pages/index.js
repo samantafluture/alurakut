@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ProfileRelationsBoxWrapper } from "../src/components/ProfileRelations";
+import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
 import MainGrid from "../src/components/MainGrid";
 import Box from "../src/components/Box";
 import ProfileSidebar from "../src/components/ProfileSidebar";
@@ -12,7 +12,7 @@ import {
   OrkutNostalgicIconSet,
 } from "../src/lib/AlurakutCommons";
 
-export default function Home() {
+export default function Home({ quantidade, boxTitle }) {
   const [username, setUsername] = useState([]);
   const [comunidades, setComunidades] = useState([
     {
@@ -34,14 +34,14 @@ export default function Home() {
       title: "Clube Arduino",
       image:
         "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-arduino.jpeg?raw=true",
-      url: "https://www.arduino.cc/",
+      url: "https://www.circuitar.com.br/tutoriais/programacao-para-arduino-primeiros-passos/",
     },
     {
       id: "20200206",
-      title: "Amo Montreal",
+      title: "Eu Amo Montreal",
       image:
         "https://github.com/samantafluture/alurakut/blob/aula2/src/assets/comunidade-montreal.jpeg?raw=true",
-      url: "https://www.mtl.org/en",
+      url: "https://www.timeout.com/montreal/things-to-do/best-things-to-do-in-montreal",
     },
     {
       id: "20191221",
@@ -53,7 +53,7 @@ export default function Home() {
   ]);
 
   useEffect(() => {
-    GitHubService.getUsername().then((userName) => setUsername(userName));
+    GitHubService.getUsername().then((name) => setUsername(name));
   }, []);
 
   return (
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className="welcomeArea" style={{ gridArea: "welcomeArea" }}>
           <Box>
-            <h1 className="title">Bem-vindo(a), {username.login}</h1>
+            <h1 className="title">Bem-vindx, {username.login}</h1>
             <OrkutNostalgicIconSet />
           </Box>
           <Box>
@@ -81,10 +81,17 @@ export default function Home() {
           style={{ gridArea: "profileRelationsArea" }}
         >
           <ProfileRelationsBoxWrapper>
-            <FriendsList />
+            {/* <FriendsList
+              boxTitle={"Amigos"}
+              quantidade={6}
+              followers={username.followers}
+            /> */}
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
-            <CommunitiesList comunidades={comunidades} />
+            <CommunitiesList
+              boxTitle={"Comunidades"}
+              comunidades={comunidades}
+            />
           </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>
