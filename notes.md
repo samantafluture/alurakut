@@ -163,3 +163,11 @@ fetch('url que queremos acessar').then()
 - [] Deixar o README.md bonitão
 
 ---
+
+## Extras
+
+- [] 2 box github -> quem eu sigo, quem me segue
+- [] melhorar fundo (talvez puxar imagens de api? fazer tema?)
+- sorte do dia
+
+---
