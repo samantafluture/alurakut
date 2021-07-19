@@ -144,30 +144,42 @@ fetch('url que queremos acessar').then()
 
 # Aula 04
 
+- Entenderemos o que é XML e AJAX;
+- Usaremos queries GraphQL para consumir os dados do DatoCMS;
+- Fazer um BFF (Back-end For Front-end) para proteger nossos dados ao enviar dados para o servidor;
+- Criar nossas comunidades pela interface do nosso Alurakut.
+
 ---
 
 ## Desafios
 
-- []
-- []
-- []
+[] Configurar suas variáveis de ambiente
+[] Fazer os scraps
 
 ---
 
 # Aula 05
 
+- Criar a nossa página de Login;
+- Roteamento com Next.js;
+- Como funciona o redirecionamento de páginas;
+- Formulários com gerenciamento do estado do input;
+- Salvar cookies com o padrão JWT para autenticar nossa página;
+- Decodificar o nosso token para mostrar a nossa Home apenas para usuários autenticados;
+
 ---
 
 ## Desafios
 
-- [] Deixar o README.md bonitão
+[] Deixar o README.md bonitão
+] 2 box github -> quem eu sigo, quem me segue
+[] Melhorar fundo (talvez puxar imagens de api? fazer tema?)
+[] Sorte do dia
+[] Fazer o logout da aplicação
+[] Mensagem de feedback quando não conseguir logar na aplicação;
+[] Criar página de perfil do usuário
 
 ---
 
-## Extras
+[Repositório oficial](https://github.com/alura-challenges/alurakut/)
 
-- [] 2 box github -> quem eu sigo, quem me segue
-- [] melhorar fundo (talvez puxar imagens de api? fazer tema?)
-- sorte do dia
-
----
