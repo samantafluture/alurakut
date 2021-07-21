@@ -194,12 +194,12 @@ creatorSlug
 
 # Aula 05
 
-- Criar a nossa página de Login;
-- Roteamento com Next.js;
-- Como funciona o redirecionamento de páginas;
-- Formulários com gerenciamento do estado do input;
-- Salvar cookies com o padrão JWT para autenticar nossa página;
-- Decodificar o nosso token para mostrar a nossa Home apenas para usuários autenticados;
+- Criar a nossa página de Login
+- Roteamento com Next.js
+- Como funciona o redirecionamento de páginas
+- Formulários com gerenciamento do estado do input
+- Salvar cookies com o padrão JWT para autenticar nossa página
+- Decodificar o nosso token para mostrar a nossa Home apenas para usuários autenticados
 
 ---
 
