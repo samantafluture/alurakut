@@ -188,7 +188,7 @@ creatorSlug
 ## Desafios
 
 [x] Refatorar código api.js
-[] Fazer os scraps
+[x] Fazer os scraps
 
 ---
 
@@ -205,11 +205,13 @@ creatorSlug
 
 ## Desafios
 
-[] 2 box github -> quem eu sigo, quem me segue
-[] Melhorar fundo (talvez puxar imagens de api? fazer tema?)
+[] Tema claro e tema escuro
 [] Sorte do dia
+[] Profile Bar -> pegar localidade do GitHub
+[] Box de quem eu sigo -> pegar via GitHub
+[] "Ver todos" -> aumentar box
 [] Fazer o logout da aplicação
-[] Mensagem de feedback quando não conseguir logar na aplicação;
+[] Mensagem de feedback quando não conseguir logar na aplicação
 [] Criar página de perfil do usuário (usar rotas Next.js com id)
 [] Criar página de comunidade (usar rotas Next.js com id)
 [] Deixar o README.md bonitão

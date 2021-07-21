@@ -5,9 +5,12 @@ import Box from "../src/components/Box";
 import ProfileSidebar from "../src/components/ProfileSidebar";
 import FriendsList from "../src/components/FriendsList";
 import CommunitiesList from "../src/components/CommunitiesList";
+import ScrapsList from "../src/components/ScrapsList";
 import CommunityForm from "../src/components/ComunityForm";
+import ScrapForm from "../src/components/ScrapForm";
+import { ScrapsBox } from "../src/components/ScrapsBox";
 import GitHubService from "../src/api/githubService";
-import DataCMSService from "../src/api/datocmsService";
+import DatoCMSService from "../src/api/datocmsService";
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
@@ -16,13 +19,19 @@ import {
 export default function Home({ quantidade, boxTitle }) {
   const [username, setUsername] = useState([]);
   const [comunidades, setComunidades] = useState([]);
+  const [scraps, setScraps] = useState([]);
 
   useEffect(() => {
     GitHubService.getUsername().then((name) => setUsername(name));
 
-    DataCMSService.getCommunities().then((respostaCompleta) => {
+    DatoCMSService.getCommunities().then((respostaCompleta) => {
       const allCommunities = respostaCompleta.data.allCommunities;
       setComunidades(allCommunities);
+    })
+
+    DatoCMSService.getScraps().then((respostaCompleta) => {
+      const allScraps = respostaCompleta.data.allScraps;
+      setScraps(allScraps);
     })
 
   }, []);
@@ -36,16 +45,32 @@ export default function Home({ quantidade, boxTitle }) {
         </div>
         <div className="welcomeArea" style={{ gridArea: "welcomeArea" }}>
           <Box>
-            <h1 className="title">Bem-vindx, {username.login}</h1>
+            <h1 className="title">Bem-vindx, {username.name}</h1>
             <OrkutNostalgicIconSet />
           </Box>
           <Box>
-            <h2 className="subTitle">O que você deseja fazer?</h2>
+            <h2 className="subTitle">Adicionar uma comunidade</h2>
             <CommunityForm
               comunidades={comunidades}
               setComunidades={setComunidades}
             />
           </Box>
+          <Box>
+            <h2 className="subTitle">Deixar um recado</h2>
+            <ScrapForm
+              scraps={scraps}
+              setScraps={setScraps}
+            />
+          </Box>
+          <ScrapsBox>
+            <ScrapsList
+              boxTitle={"Recados"}
+              scraps={scraps}
+              name={username.login}
+              image={username.avatar_url}
+              url={username.html_url}
+            />
+          </ScrapsBox> 
         </div>
         <div
           className="profileRelationsArea"
@@ -63,7 +88,7 @@ export default function Home({ quantidade, boxTitle }) {
               boxTitle={"Comunidades"}
               comunidades={comunidades}
             />
-          </ProfileRelationsBoxWrapper>
+          </ProfileRelationsBoxWrapper> 
         </div>
       </MainGrid>
     </>
