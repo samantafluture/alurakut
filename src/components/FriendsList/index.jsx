@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GitHubService from "../../api/api";
+import GitHubService from "../../api/githubService";
 import RelationsItem from "../../components/RelationsItem";
 
 export default function FriendsList({ quantidade, boxTitle, followers }) {

@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function CommunityForm({ comunidades, setComunidades }) {
+export default function CommunityForm({
+  comunidades,
+  setComunidades,
+  username,
+}) {
   return (
     <>
       <form
@@ -9,14 +13,24 @@ export default function CommunityForm({ comunidades, setComunidades }) {
           const dadosDoForm = new FormData(e.target);
 
           const comunidade = {
-            id: new Date().toISOString(),
             title: dadosDoForm.get("title"),
-            image: dadosDoForm.get("image"),
-            url: dadosDoForm.get("link"),
+            imageUrl: dadosDoForm.get("image"),
+            link: dadosDoForm.get("link"),
+            creatorSlug: dadosDoForm.get(username),
           };
 
-          const comunidadesAtualizadas = [...comunidades, comunidade];
-          setComunidades(comunidadesAtualizadas);
+          fetch("/api/comunidades", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(comunidade),
+          }).then(async (response) => {
+            const dados = await response.json();
+            const comunidade = dados.registroCriado;
+            const comunidadesAtualizadas = [...comunidades, comunidade];
+            setComunidades(comunidadesAtualizadas);
+          });
         }}
       >
         <div>

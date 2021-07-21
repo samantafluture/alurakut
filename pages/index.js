@@ -6,7 +6,8 @@ import ProfileSidebar from "../src/components/ProfileSidebar";
 import FriendsList from "../src/components/FriendsList";
 import CommunitiesList from "../src/components/CommunitiesList";
 import CommunityForm from "../src/components/ComunityForm";
-import GitHubService from "../src/api/api";
+import GitHubService from "../src/api/githubService";
+import DataCMSService from "../src/api/datocmsService";
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
@@ -19,31 +20,9 @@ export default function Home({ quantidade, boxTitle }) {
   useEffect(() => {
     GitHubService.getUsername().then((name) => setUsername(name));
 
-    // API GraphQL
-    fetch("https://graphql.datocms.com/", {
-      method: "POST",
-      headers: {
-        "Authorization": "03b32fdecaeddc8861172c77e3f8e1",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        "query": `query {
-          allCommunities {
-            id
-            title
-            imageUrl
-            link
-            creatorSlug
-          }
-        }`
-      }),
-    })
-    .then((response) => response.json())
-    .then((respostaCompleta) => {
+    DataCMSService.getCommunities().then((respostaCompleta) => {
       const allCommunities = respostaCompleta.data.allCommunities;
       setComunidades(allCommunities);
-      console.log(allCommunities);
     })
 
   }, []);

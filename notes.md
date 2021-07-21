@@ -177,16 +177,18 @@ creatorSlug
 
 ## Criar novas comunidades 
 
-
+- BFF: backend for front-end
+- criar com o próprio Next.js
+- pasta "api" dentro de "pages"
+- servidorzinho que roda as requisições que são solicitadas e depois desliga
+- vamos fazer por motivos de segurança dos dados
 
 ---
 
 ## Desafios
 
-[] Refatorar código api.js
-[] Configurar suas variáveis de ambiente
+[x] Refatorar código api.js
 [] Fazer os scraps
-[] Rotas Next.js (criar página da comunidade com id)
 
 ---
 
@@ -203,13 +205,14 @@ creatorSlug
 
 ## Desafios
 
-[] Deixar o README.md bonitão
-] 2 box github -> quem eu sigo, quem me segue
+[] 2 box github -> quem eu sigo, quem me segue
 [] Melhorar fundo (talvez puxar imagens de api? fazer tema?)
 [] Sorte do dia
 [] Fazer o logout da aplicação
 [] Mensagem de feedback quando não conseguir logar na aplicação;
-[] Criar página de perfil do usuário
+[] Criar página de perfil do usuário (usar rotas Next.js com id)
+[] Criar página de comunidade (usar rotas Next.js com id)
+[] Deixar o README.md bonitão
 
 ---
 
