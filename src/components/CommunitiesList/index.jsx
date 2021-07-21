@@ -17,9 +17,9 @@ export default function CommunitiesList({ comunidades, boxTitle }) {
           return (
             <RelationsItem
               id={comunidade.id}
-              url={comunidade.url}
+              url={comunidade.link}
               title={comunidade.title}
-              image={comunidade.image}
+              image={comunidade.imageUrl}
             />
           );
         })}

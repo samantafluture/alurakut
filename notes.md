@@ -28,12 +28,15 @@ http://localhost:3000/ (visitar url)
 ## Separação de pastas
 
 > src (código fonte do projeto)
-    > components (elementos que irão formar pages)
-        > MainGrid
+> components (elementos que irão formar pages)
+> MainGrid
+
             index.js
         > Box
             index.js
+
 > pages (tudo o que vira página)
+
     index.js
     _document.js
     _app.js
@@ -47,7 +50,7 @@ http://localhost:3000/ (visitar url)
 
 ## Usar js dentro do jsx
 
-- {} sempre abrir e fechar chaves para inserir js 
+- {} sempre abrir e fechar chaves para inserir js
 
 ## Função map
 
@@ -105,7 +108,7 @@ http://localhost:3000/ (visitar url)
 
 ## fetch api
 
-- consumir dados de api com fetch 
+- consumir dados de api com fetch
 - recebe uma promise
 - then é das promises => quando está promise for resolvida, faça x
 - json() converte para objeto js (json)
@@ -149,12 +152,41 @@ fetch('url que queremos acessar').then()
 - Fazer um BFF (Back-end For Front-end) para proteger nossos dados ao enviar dados para o servidor;
 - Criar nossas comunidades pela interface do nosso Alurakut.
 
+## Pegar dados DatoCMS
+
+- Aba APIExplorer (playground)
+- GraphQL
+  - diferente do REST (que traz todo o conteúdo)
+  - especifica o que vc quer buscar
+  - trabalha com buscas em cima do protocolo HTTP
+
+ˋˋˋ
+{
+allCommunities {
+id
+title
+imageUrl
+link
+creatorSlug
+}
+}
+ˋˋˋ
+
+- Como acessar a nossa API
+- [Tutorial](https://www.datocms.com/docs/content-delivery-api/your-first-request))
+
+## Criar novas comunidades 
+
+
+
 ---
 
 ## Desafios
 
+[] Refatorar código api.js
 [] Configurar suas variáveis de ambiente
 [] Fazer os scraps
+[] Rotas Next.js (criar página da comunidade com id)
 
 ---
 
@@ -182,4 +214,3 @@ fetch('url que queremos acessar').then()
 ---
 
 [Repositório oficial](https://github.com/alura-challenges/alurakut/)
-
