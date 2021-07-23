@@ -101,7 +101,7 @@ http://localhost:3000/ (visitar url)
 
 ---
 
-# Aula Aula 03
+# Aula 03
 
 - cms é um gerenciador de conteúdo
 - vamos usar para persistir as comunidades
@@ -159,21 +159,8 @@ fetch('url que queremos acessar').then()
   - diferente do REST (que traz todo o conteúdo)
   - especifica o que vc quer buscar
   - trabalha com buscas em cima do protocolo HTTP
-
-ˋˋˋ
-{
-allCommunities {
-id
-title
-imageUrl
-link
-creatorSlug
-}
-}
-ˋˋˋ
-
 - Como acessar a nossa API
-- [Tutorial](https://www.datocms.com/docs/content-delivery-api/your-first-request))
+- [Tutorial](https://www.datocms.com/docs/content-delivery-api/your-first-request)
 
 ## Criar novas comunidades 
 
@@ -187,8 +174,8 @@ creatorSlug
 
 ## Desafios
 
-[x] Refatorar código api.js
-[x] Fazer os scraps
+- [x] Refatorar código api.js
+- [x] Fazer os scraps
 
 ---
 
@@ -205,16 +192,16 @@ creatorSlug
 
 ## Desafios
 
-[] Tema claro e tema escuro
-[] Sorte do dia
-[] Profile Bar -> pegar localidade do GitHub
-[] Box de quem eu sigo -> pegar via GitHub
-[] "Ver todos" -> aumentar box
-[] Fazer o logout da aplicação
-[] Mensagem de feedback quando não conseguir logar na aplicação
-[] Criar página de perfil do usuário (usar rotas Next.js com id)
-[] Criar página de comunidade (usar rotas Next.js com id)
-[] Deixar o README.md bonitão
+- [] Tema claro e tema escuro
+- [] Sorte do dia
+- [] Profile Bar -> pegar localidade do GitHub
+- [] Box de quem eu sigo -> pegar via GitHub
+- [] "Ver todos" -> aumentar box
+- [] Fazer o logout da aplicação
+- [] Mensagem de feedback quando não conseguir logar na aplicação
+- [] Criar página de perfil do usuário (usar rotas Next.js com id)
+- [] Criar página de comunidade (usar rotas Next.js com id)
+- [] Deixar o README.md bonitão
 
 ---
 
