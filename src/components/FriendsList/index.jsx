@@ -1,18 +1,18 @@
 import React from "react";
 import RelationsItem from "../RelationsItem";
 
-export default function FriendsList({ followers, boxTitle }) {
+export default function FriendsList({ followers, filteredFollowers, boxTitle }) {
 
   return (
     <>
       <h2 className="smallTitle">
         {boxTitle}
-        <a className="boxLink" href={`/`}>
+        <a className="boxLink" href={`/amigos`}>
           &nbsp;({followers.length})
         </a>
       </h2>
       <ul>
-        {followers.slice(0,6).map((follower) => {
+        {filteredFollowers.map((follower) => {
           return (
             <RelationsItem
               id={follower.login}
@@ -23,10 +23,6 @@ export default function FriendsList({ followers, boxTitle }) {
           );
         })}
       </ul>
-      <hr />
-      <a className="boxLink" href={`/`}>
-        Ver todos
-      </a>
     </>
   );
 }

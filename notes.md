@@ -210,13 +210,13 @@ fetch('url que queremos acessar').then()
 ## Desafios
 
 - [x] Implementar logout da aplicação
-- [?] Puxar dados API GitHub a partir do usuário que está logado
+- [x] Puxar dados API GitHub a partir do usuário que está logado
 
 ## Desafios extras
 
-- [] Acrescentar dados do githubUser: local e bio
-- [] Adicionar pessoas que o githubUser segue
-- [] "Ver todos": direcionar para página de comunidades e/ou de seguidores/seguindo
+- [x] Acrescentar dados do githubUser: local e bio
+- [x] Criar páginas que listam todas as comunidades e todos os amigos
+- [x] "Ver todos": direcionar para as páginas acima
 - [] Criar página de perfil do usuário (usar rotas Next.js com id)
 - [] Criar página de comunidade (usar rotas Next.js com id)
 - [] Validação do campo de login (mensagem de erro)

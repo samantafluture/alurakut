@@ -8,7 +8,7 @@ export default function CommunitiesList({ comunidades, boxTitle }) {
     <>
       <h2 className="smallTitle">
         {boxTitle}
-        <a className="boxLink" href={`/`}>
+        <a className="boxLink" href={`/comunidades`}>
           &nbsp;({comunidades.length})
         </a>
       </h2>
@@ -24,10 +24,7 @@ export default function CommunitiesList({ comunidades, boxTitle }) {
           );
         })}
       </ul>
-      <hr />
-      <a className="boxLink" href={`/`}>
-        Ver todos
-      </a>
+      
     </>
   );
 }

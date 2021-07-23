@@ -25,6 +25,7 @@ export default function Home(props) {
   const [followers, setFollowers] = useState([]);
   const [comunidades, setComunidades] = useState([]);
   const [scraps, setScraps] = useState([]);
+  // const filteredFollowers = followers.slice(0, 6);
 
   useEffect(() => {
     GitHubService.getUsername(githubUser).then((name) => setUsername(name));
@@ -60,10 +61,8 @@ export default function Home(props) {
             />
             <OrkutNostalgicIconSet
               recados={scraps.length}
-              fotos="45"
-              videos="2"
-              fas="1"
-              mensagens="7"
+              amigos={followers.length}
+              comunidades={comunidades.length}
               confiavel="3"
               legal="3"
               sexy="3"
@@ -88,6 +87,10 @@ export default function Home(props) {
               image={username.avatar_url}
               url={username.html_url}
             />
+            <hr />
+            <a className="boxLink" href={`/recados`}>
+              Ver todos
+            </a>
           </ScrapsBox>
         </div>
         <div
@@ -95,16 +98,25 @@ export default function Home(props) {
           style={{ gridArea: "profileRelationsArea" }}
         >
           <ProfileRelationsBoxWrapper>
-            <FriendsList
+            {/* <FriendsList
               boxTitle={"Amigos"}
               followers={followers}
-            />
+              filteredFollowers={filteredFollowers}
+            /> */}
+            <hr />
+            <a className="boxLink" href={`/amigos`}>
+              Ver todos
+            </a>
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
             <CommunitiesList
               boxTitle={"Comunidades"}
               comunidades={comunidades}
             />
+            <hr />
+            <a className="boxLink" href={`/comunidades`}>
+              Ver todos
+            </a>
           </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>

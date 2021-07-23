@@ -5,7 +5,7 @@ export default function ScrapsList({ scraps, boxTitle }) {
     <>
       <h2 className="smallTitle">
         {boxTitle}
-        <a className="boxLink" href={`/`}>
+        <a className="boxLink" href={`/recados`}>
           &nbsp;({scraps.length})
         </a>
       </h2>
@@ -22,20 +22,7 @@ export default function ScrapsList({ scraps, boxTitle }) {
           );
         })}
       </ul>
-      <hr />
-      <a className="boxLink" href={`/`}>
-        Ver todos
-      </a>
     </>
   );
 }
 
-/**
- *  <li key={scrap.id}>
-              <a href={url}>
-                <img src={image} />
-                <span>{name}</span>
-              </a>
-              <p>{scrap.text}</p>
-            </li>
- */

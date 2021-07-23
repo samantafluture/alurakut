@@ -200,25 +200,21 @@ export function AlurakutProfileSidebarMenuDefault() {
           <img src={`${BASE_URL}/icons/user.svg`} />
           Perfil
         </a>
-        <a href="/">
+        <a href="/recados">
           <img src={`${BASE_URL}/icons/book.svg`} />
           Recados
         </a>
-        <a href="/">
-          <img src={`${BASE_URL}/icons/camera.svg`} />
-          Fotos
+        <a href="/amigos">
+          <img src={`${BASE_URL}/icons/plus.svg`} />
+          Amigos
         </a>
-        <a href="/">
+        <a href="/comunidades">
           <img src={`${BASE_URL}/icons/sun.svg`} />
-          Depoimentos
+          Comunidades
         </a>
       </nav>
       <hr />
       <nav>
-        <a href="/">
-          <img src={`${BASE_URL}/icons/plus.svg`} />
-          GitHub Trends
-        </a>
         <a href="/logout">
           <img src={`${BASE_URL}//icons/logout.svg`} />
           Sair
@@ -252,9 +248,8 @@ export function OrkutNostalgicIconSet(props) {
     <OrkutNostalgicIconSet.List>
       {[
         { name: "Recados", slug: "recados", icon: "book" },
-        { name: "Fotos", slug: "fotos", icon: "camera" },
-        { name: "Fãs", slug: "fas", icon: "star" },
-        { name: "Mensagens", slug: "mensagens", icon: "email" },
+        { name: "Amigos", slug: "amigos", icon: "plus" },
+        { name: "Comunidades", slug: "comunidades", icon: "sun" },
       ].map(({ name, slug, icon }) => (
         <li key={`orkut__icon_set__${slug}`}>
           <span
@@ -312,7 +307,7 @@ export function OrkutNostalgicIconSet(props) {
 }
 OrkutNostalgicIconSet.List = styled.ul`
   margin-top: 0px;
-  padding: 8px;
+  padding: 16px;
   list-style: none;
   display: flex;
   justify-content: space-between;
