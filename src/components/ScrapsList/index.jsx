@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ScrapsList({ scraps, boxTitle, name, image, url }) {
+export default function ScrapsList({ scraps, boxTitle }) {
   return (
     <>
       <h2 className="smallTitle">
@@ -13,9 +13,9 @@ export default function ScrapsList({ scraps, boxTitle, name, image, url }) {
         {scraps.map((scrap) => {
           return (
             <li key={scrap.id}>
-              <a href={url}>
-                <img src={image} />
-                <span>{name}</span>
+              <a href={`/users/${scrap.creatorSlug}`}>
+                <img src={`https://github.com/${scrap.creatorSlug}.png`} />
+                <span>{scrap.creatorSlug}</span>
               </a>
               <p>{scrap.text}</p>
             </li>
@@ -29,3 +29,13 @@ export default function ScrapsList({ scraps, boxTitle, name, image, url }) {
     </>
   );
 }
+
+/**
+ *  <li key={scrap.id}>
+              <a href={url}>
+                <img src={image} />
+                <span>{name}</span>
+              </a>
+              <p>{scrap.text}</p>
+            </li>
+ */

@@ -1,5 +1,5 @@
 export default class DatoCMSService {
-  static async getCommunities() {
+  static async getCommunities(githubUser) {
     const url = "https://graphql.datocms.com/";
 
     const resposta = await fetch(url, {
@@ -18,11 +18,6 @@ export default class DatoCMSService {
               link
               creatorSlug
             }
-            allScraps {
-              id
-              text
-              creatorSlug
-            }
           }`,
       }),
     });
@@ -31,7 +26,7 @@ export default class DatoCMSService {
     return communities;
   }
 
-  static async getScraps() {
+  static async getScraps(githubUser) {
     const url = "https://graphql.datocms.com/";
 
     const resposta = await fetch(url, {
@@ -43,7 +38,7 @@ export default class DatoCMSService {
       },
       body: JSON.stringify({
         query: `query {
-            allScraps {
+            allScraps{
               id
               text
               creatorSlug
@@ -56,3 +51,4 @@ export default class DatoCMSService {
     return scraps;
   }
 }
+

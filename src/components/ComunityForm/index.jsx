@@ -4,6 +4,7 @@ export default function CommunityForm({
   comunidades,
   setComunidades,
   username,
+  githubUser
 }) {
   return (
     <>
@@ -16,7 +17,7 @@ export default function CommunityForm({
             title: dadosDoForm.get("title"),
             imageUrl: dadosDoForm.get("image"),
             link: dadosDoForm.get("link"),
-            creatorSlug: dadosDoForm.get(username),
+            creatorSlug: githubUser,
           };
 
           fetch("/api/comunidades", {

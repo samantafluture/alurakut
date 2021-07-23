@@ -5,7 +5,6 @@ export default async function recebedorDeScraps(request, response) {
     const TOKEN = "318d72a71b4a0a4a23f4c94c86d245";
     const client = new SiteClient(TOKEN);
 
-    // No futuro, cabe validar essa inclusão de dados
     const registroCriado = await client.items.create({
       itemType: "998150", // Model ID
       ...request.body,

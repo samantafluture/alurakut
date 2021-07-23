@@ -16,7 +16,7 @@ function Link({ href, children, ...props }) {
 // ================================================================================================================
 // Menu
 // ================================================================================================================
-export function AlurakutMenu({ username }) {
+export function AlurakutMenu({ githubUser }) {
   const [isMenuOpen, setMenuState] = React.useState(false);
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
@@ -52,7 +52,7 @@ export function AlurakutMenu({ username }) {
           )}
         </button>
       </div>
-      <AlurakutMenuProfileSidebar username={username} />
+      <AlurakutMenuProfileSidebar githubUser={githubUser} />
     </AlurakutMenu.Wrapper>
   );
 }
@@ -167,18 +167,18 @@ AlurakutMenu.Logo = styled.img`
   height: 34px;
 `;
 
-function AlurakutMenuProfileSidebar({ username }) {
+function AlurakutMenuProfileSidebar({ githubUser }) {
   return (
     <div className="alurakutMenuProfileSidebar">
       <div>
         <img
-          src={`https://github.com/${username}.png`}
+          src={`https://github.com/${githubUser}.png`}
           style={{ borderRadius: "8px" }}
         />
         <hr />
         <p>
-          <a className="boxLink" href={`https://github.com/${username}`}>
-          @{username}
+          <a className="boxLink" href={`https://github.com/${githubUser}`}>
+          @{githubUser}
           </a>
         </p>
         <hr />
@@ -253,7 +253,6 @@ export function OrkutNostalgicIconSet(props) {
       {[
         { name: "Recados", slug: "recados", icon: "book" },
         { name: "Fotos", slug: "fotos", icon: "camera" },
-        { name: "Videos", slug: "videos", icon: "video-camera" },
         { name: "Fãs", slug: "fas", icon: "star" },
         { name: "Mensagens", slug: "mensagens", icon: "email" },
       ].map(({ name, slug, icon }) => (
@@ -273,7 +272,7 @@ export function OrkutNostalgicIconSet(props) {
               className="OrkutNostalgicIconSet__iconSample"
               src={`https://alurakut.vercel.app/icons/${icon}.svg`}
             />
-            {props[slug] ? props[slug] : 3}
+            {props[slug] ? props[slug] : 0}
           </span>
         </li>
       ))}
@@ -312,7 +311,8 @@ export function OrkutNostalgicIconSet(props) {
   );
 }
 OrkutNostalgicIconSet.List = styled.ul`
-  margin-top: 32px;
+  margin-top: 0px;
+  padding: 8px;
   list-style: none;
   display: flex;
   justify-content: space-between;

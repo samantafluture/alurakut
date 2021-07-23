@@ -19,6 +19,7 @@ li > p {
   width: 100%;
   border-radius: 8px;
   margin-left: 8px;
+  font-size: .85rem;
 }
 img {
   object-fit: cover;
@@ -26,9 +27,6 @@ img {
   max-width: 100%;
   height: 100%;
   position: relative;
-}
-p {
-    
 }
 ul li a {
   display: inline-block;

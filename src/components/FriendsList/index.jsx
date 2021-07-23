@@ -1,32 +1,24 @@
-import React, { useEffect, useState } from "react";
-import GitHubService from "../../api/githubService";
-import RelationsItem from "../../components/RelationsItem";
+import React from "react";
+import RelationsItem from "../RelationsItem";
 
-export default function FriendsList({ quantidade, boxTitle, followers }) {
-  const [friends, setFriends] = useState([]);
-
-  useEffect(() => {
-    GitHubService.getFollowers(quantidade).then((friendsList) =>
-      setFriends(friendsList)
-    );
-  }, []);
+export default function FriendsList({ followers, boxTitle }) {
 
   return (
     <>
       <h2 className="smallTitle">
         {boxTitle}
         <a className="boxLink" href={`/`}>
-          &nbsp;({followers})
+          &nbsp;({followers.length})
         </a>
       </h2>
       <ul>
-        {friends.map((friend) => {
+        {followers.slice(0,6).map((follower) => {
           return (
             <RelationsItem
-              id={friend.login}
-              url={friend.html_url}
-              title={friend.login}
-              image={friend.avatar_url}
+              id={follower.login}
+              url={follower.html_url}
+              title={follower.login}
+              image={follower.avatar_url}
             />
           );
         })}
@@ -38,3 +30,15 @@ export default function FriendsList({ quantidade, boxTitle, followers }) {
     </>
   );
 }
+
+/**
+ * 
+ * <>
+              <li key={follower.id}>
+                <a href={follower.html_url}>
+                  <img src={follower.avatar_url} />
+                  <span>{follower.login}</span>
+                </a>
+              </li>
+            </>
+ */

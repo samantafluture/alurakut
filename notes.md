@@ -181,29 +181,46 @@ fetch('url que queremos acessar').then()
 
 # Aula 05
 
+## Roteamento via Next.js
+
 - Criar a nossa página de Login
 - Roteamento automático com Next.js (dentro da pasta pages, já colocar o arquivo com nome da rota; ex: login.js)
 - Dá para fazer isso sem Next.js com React Router DOM
 - useRouter é um hook do Next.js, segue conceito de single page application, dando redirecionamento sem recarregar a página do usuário (o que acontece com o window.locate.href)
-- URL de login que faremos fetch: https://alurakut.vercel.app/api/login
 
-- Salvar cookies com o padrão JWT para autenticar nossa página
-- Decodificar o nosso token para mostrar a nossa Home apenas para usuários autenticados
+## Login via JWT
+
+- URL de login que faremos fetch: https://alurakut.vercel.app/api/login
+- token respeita um padrão de compressão de informações, padrão do JWT (jason web token), uma especificação para a comunicação entre serviços de backend e front
+- trabalhar com cookies no Netx.js = nookies
+
+`yarn add nookies`
+
+## getServerSideProps
+
+- Next.js -> getServerSideProps: permite que, enquanto sua página está sendo montada, você decide se quer montar a página ou redirecionar o usuário
+- inserir no final da Home Page a função getServerSideProps
+- tudo o que eu passar de props nesta função vou poder acessar nos meus componentes
+- usamos destructuring no props; ele já entende que o nome da variável é o nome da chave, então no props só coloco "githubUser" e nada mais
+
+`yarn add jsonwebtoken`
 
 ---
 
 ## Desafios
 
-- [] Tema claro e tema escuro
-- [] Sorte do dia
-- [] Profile Bar -> pegar localidade do GitHub
-- [] Box de quem eu sigo -> pegar via GitHub
-- [] "Ver todos" -> aumentar box
-- [] Fazer o logout da aplicação
-- [] Mensagem de feedback quando não conseguir logar na aplicação
-- [] Validação do campo de login
+- [x] Implementar logout da aplicação
+- [?] Puxar dados API GitHub a partir do usuário que está logado
+
+## Desafios extras
+
+- [] Acrescentar dados do githubUser: local e bio
+- [] Adicionar pessoas que o githubUser segue
+- [] "Ver todos": direcionar para página de comunidades e/ou de seguidores/seguindo
 - [] Criar página de perfil do usuário (usar rotas Next.js com id)
 - [] Criar página de comunidade (usar rotas Next.js com id)
+- [] Validação do campo de login (mensagem de erro)
+- [] Tema claro e tema escuro
 - [] Adicionar favicon
 - [] Refatorar código e pastas
 - [] Deixar o README.md bonitão

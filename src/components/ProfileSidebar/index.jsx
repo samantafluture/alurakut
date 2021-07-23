@@ -4,17 +4,17 @@ import Box from "../Box";
 function ProfileSidebar(props) {
   return (
     <Box as ="aside">
-      <a href={`https://github.com/${props.username}`}>
+      <a href={`https://github.com/${props.githubUser}`}>
         <img
-          src={`https://github.com/${props.username}.png`}
+          src={`https://github.com/${props.githubUser}.png`}
           style={{ borderRadius: "8px" }}
         />
       </a>
       <hr />
 
       <p>
-        <a className="boxLink" href={`https://github.com/${props.username}`}>
-          @{props.username}
+        <a className="boxLink" href={`https://github.com/${props.githubUser}`}>
+          @{props.githubUser}
         </a>
       </p>
       <hr />
