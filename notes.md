@@ -182,9 +182,11 @@ fetch('url que queremos acessar').then()
 # Aula 05
 
 - Criar a nossa página de Login
-- Roteamento com Next.js
-- Como funciona o redirecionamento de páginas
-- Formulários com gerenciamento do estado do input
+- Roteamento automático com Next.js (dentro da pasta pages, já colocar o arquivo com nome da rota; ex: login.js)
+- Dá para fazer isso sem Next.js com React Router DOM
+- useRouter é um hook do Next.js, segue conceito de single page application, dando redirecionamento sem recarregar a página do usuário (o que acontece com o window.locate.href)
+- URL de login que faremos fetch: https://alurakut.vercel.app/api/login
+
 - Salvar cookies com o padrão JWT para autenticar nossa página
 - Decodificar o nosso token para mostrar a nossa Home apenas para usuários autenticados
 
@@ -199,8 +201,11 @@ fetch('url que queremos acessar').then()
 - [] "Ver todos" -> aumentar box
 - [] Fazer o logout da aplicação
 - [] Mensagem de feedback quando não conseguir logar na aplicação
+- [] Validação do campo de login
 - [] Criar página de perfil do usuário (usar rotas Next.js com id)
 - [] Criar página de comunidade (usar rotas Next.js com id)
+- [] Adicionar favicon
+- [] Refatorar código e pastas
 - [] Deixar o README.md bonitão
 
 ---
