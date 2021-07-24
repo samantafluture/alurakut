@@ -27,7 +27,7 @@ O principal objeto do projeto foi exercitar o uso de Next.js, APIs e Headless CM
 5. Visualizar a página de perfil de seus amigos
 6. Criar comunidades
 7. Visualizar suas comunidades
-8. Fazer logout
+8. Fazer logout da aplicação
 
 ## Em Produção
 
