@@ -3,11 +3,12 @@ import React from "react";
 export default function CommunityForm({
   comunidades,
   setComunidades,
-  username,
+  boxTitle,
   githubUser
 }) {
   return (
     <>
+    <h2 className="subTitle">{boxTitle}</h2>
       <form
         onSubmit={function handleCriaComunidade(e) {
           e.preventDefault();

@@ -1,12 +1,9 @@
 import React from "react";
 
-export default function ScrapForm({
-  scraps,
-  setScraps,
-  username,
-}) {
+export default function ScrapForm({ scraps, setScraps, username, boxTitle }) {
   return (
     <>
+      <h2 className="subTitle">{boxTitle}</h2>
       <form
         onSubmit={function handleCreateScrap(e) {
           e.preventDefault();

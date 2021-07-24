@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { AlurakutStyles } from "../src/lib/AlurakutCommons";
 
@@ -35,6 +36,13 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Head>
+          <title>Devkut</title>
+          <link
+            rel="shortcut icon"
+            href="https://raw.githubusercontent.com/samantafluture/alurakut/aula5/public/favicon-devkut.ico"
+          />
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

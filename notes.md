@@ -211,26 +211,24 @@ fetch('url que queremos acessar').then()
 
 - [x] Implementar logout da aplicação
 - [x] Puxar dados API GitHub a partir do usuário que está logado
-
-## Desafios extras
-
 - [x] Acrescentar dados do githubUser: local e bio
 - [x] Criar páginas que listam todas as comunidades e todos os amigos
 - [x] "Ver todos": direcionar para as páginas acima
 - [X] Criar página de perfil do usuário (usar rotas Next.js com id)
-- [] Tema claro e tema escuro
-- [] Adicionar favicon e novo logo/nome (devkut)
-- [] Refatorar código e pastas
-- [] Deixar o README.md bonitão
+- [x] Adicionar favicon e novo logo/nome (devkut)
+- [x] Refatorar código e pastas
 
 ---
 
-# Bugs & To Do's
+# To Do's
 
 - [] Puxar "comunidades" e "recados" do usuário logado
 - [] Puxar todos os followers do GitHub (+ de 30)
 - [] Criar página de comunidade (usar rotas Next.js com id)
 - [] Fazer sistema de membros das comunidades
+- [] Adicionar nomes das rotas no Head ('home', 'recados'...)
+- [] Tema claro e tema escuro
+- [] Deixar o README.md bonitão
 
 ---
 

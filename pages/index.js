@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
 import nookies from "nookies";
 import jwt from "jsonwebtoken";
-import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
+
+import GitHubService from "../src/api/githubService";
+import DatoCMSService from "../src/api/datocmsService";
+
 import MainGrid from "../src/components/MainGrid";
 import Box from "../src/components/Box";
+import BoxLink from "../src/components/BoxLink";
 import ProfileSidebar from "../src/components/ProfileSidebar";
 import ProfileBio from "../src/components/ProfileBio";
 import FriendsList from "../src/components/FriendsList";
 import CommunitiesList from "../src/components/CommunitiesList";
-import ScrapsList from "../src/components/ScrapsList";
 import CommunityForm from "../src/components/ComunityForm";
 import ScrapForm from "../src/components/ScrapForm";
-import { ScrapsBox } from "../src/components/ScrapsBox";
-import GitHubService from "../src/api/githubService";
-import DatoCMSService from "../src/api/datocmsService";
+import ScrapsBox from "../src/components/ScrapsBox";
+import ScrapsList from "../src/components/ScrapsList";
+
+import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
@@ -26,21 +30,26 @@ export default function Home(props) {
   const [comunidades, setComunidades] = useState([]);
   const [scraps, setScraps] = useState([]);
   const filteredFollowers = followers.slice(0, 6);
+  const filteredComunidades = comunidades.slice(0, 6);
 
   useEffect(() => {
-    GitHubService.getUsername(githubUser).then((name) => setUsername(name));
+    GitHubService.getUsername(githubUser).then((data) => {
+      const loggedUsername = data;
+      setUsername(loggedUsername);
+    });
 
-    GitHubService.getFollowers(githubUser).then((followersList) =>
-      setFollowers(followersList)
-    );
+    GitHubService.getFollowers(githubUser).then((data) => {
+      const allFollowers = data;
+      setFollowers(allFollowers);
+  });
 
-    DatoCMSService.getCommunities().then((respostaCompleta) => {
-      const allCommunities = respostaCompleta.data.allCommunities;
+    DatoCMSService.getCommunities().then((data) => {
+      const allCommunities = data.data.allCommunities;
       setComunidades(allCommunities);
     });
 
-    DatoCMSService.getScraps().then((respostaCompleta) => {
-      const allScraps = respostaCompleta.data.allScraps;
+    DatoCMSService.getScraps().then((data) => {
+      const allScraps = data.data.allScraps;
       setScraps(allScraps);
     });
   }, []);
@@ -69,15 +78,18 @@ export default function Home(props) {
             />
           </Box>
           <Box>
-            <h2 className="subTitle">Adicionar uma comunidade</h2>
             <CommunityForm
+              boxTitle={"Adicionar uma comunidade"}
               comunidades={comunidades}
               setComunidades={setComunidades}
             />
           </Box>
           <Box>
-            <h2 className="subTitle">Deixar um recado</h2>
-            <ScrapForm scraps={scraps} setScraps={setScraps} />
+            <ScrapForm
+              boxTitle={"Deixar um recado"}
+              scraps={scraps}
+              setScraps={setScraps}
+            />
           </Box>
           <ScrapsBox>
             <ScrapsList
@@ -86,10 +98,7 @@ export default function Home(props) {
               name={username.login}
               image={username.avatar_url}
             />
-            <hr />
-            <a className="boxLink" href={`/recados`}>
-              Ver todos
-            </a>
+            <BoxLink />
           </ScrapsBox>
         </div>
         <div
@@ -102,20 +111,15 @@ export default function Home(props) {
               followers={followers}
               filteredFollowers={filteredFollowers}
             />
-            <hr />
-            <a className="boxLink" href={`/amigos`}>
-              Ver todos
-            </a>
+            <BoxLink />
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
             <CommunitiesList
               boxTitle={"Comunidades"}
               comunidades={comunidades}
+              filteredComunidades={filteredComunidades}
             />
-            <hr />
-            <a className="boxLink" href={`/comunidades`}>
-              Ver todos
-            </a>
+            <BoxLink />
           </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>

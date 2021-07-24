@@ -1,9 +1,7 @@
 import React from "react";
 import RelationsItem from "../RelationsItem";
 
-export default function CommunitiesList({ comunidades, boxTitle }) {
-  const comunidadesVisible = comunidades.slice(0, 6);
-
+export default function CommunitiesList({ comunidades, filteredComunidades, boxTitle }) {
   return (
     <>
       <h2 className="smallTitle">
@@ -13,7 +11,7 @@ export default function CommunitiesList({ comunidades, boxTitle }) {
         </a>
       </h2>
       <ul>
-        {comunidadesVisible.map((comunidade) => {
+        {filteredComunidades.map((comunidade) => {
           return (
             <RelationsItem
               id={comunidade.id}
