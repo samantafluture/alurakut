@@ -21,7 +21,7 @@ export function AlurakutMenu({ githubUser }) {
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
       <div className="container">
-        <AlurakutMenu.Logo src="../assets/logo-devkut.svg" />
+        <AlurakutMenu.Logo src={`https://raw.githubusercontent.com/samantafluture/alurakut/aula5/src/assets/logo-devkut.svg`} />
 
         <nav style={{ flex: 1 }}>
           {[
@@ -162,7 +162,7 @@ AlurakutMenu.Wrapper = styled.header`
 `;
 AlurakutMenu.Logo = styled.img`
   background-color: #ffffff;
-  padding: 9px 14px;
+  padding: 6px;
   border-radius: 1000px;
   height: 34px;
 `;
