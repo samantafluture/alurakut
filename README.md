@@ -31,13 +31,13 @@ O principal objeto do projeto foi exercitar o uso de Next.js, APIs e Headless CM
 
 ## Em Produção
 
-- [] Puxar "comunidades" e "recados" do usuário logado
-- [] Puxar todos os followers do GitHub (+ de 30)
+- [ ] Puxar "comunidades" e "recados" do usuário logado
+- [ ] Puxar todos os followers do GitHub (+ de 30)
 - [x] Criar página de perfil dos amigos
-- [] Criar página de comunidade (usar rotas Next.js com id)
-- [] Fazer sistema de membros das comunidades
-- [] Adicionar nomes das rotas no Head ('home', 'recados'...)
-- [] Tema claro e tema escuro
+- [ ] Criar página de comunidade (usar rotas Next.js com id)
+- [ ] Fazer sistema de membros das comunidades
+- [ ] Adicionar nomes das rotas no Head ('home', 'recados'...)
+- [ ] Tema claro e tema escuro
 - [x] Refatorar README.md
 
 ## Como Usar & Contribuir
