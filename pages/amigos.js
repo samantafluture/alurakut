@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import PageGrid from "../src/components/PageGrid";
 import ProfileSidebar from "../src/components/ProfileSidebar";
 import FriendsList from "../src/components/FriendsList";
+import FriendsBox from "../src/components/FriendsBox";
 import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
 import { AlurakutMenu } from "../src/lib/AlurakutCommons";
 import GitHubService from "../src/api/githubService";
@@ -23,13 +24,13 @@ export default function AmigosPage(props) {
       <AlurakutMenu githubUser={githubUser} />
       <PageGrid>
         <ProfileSidebar githubUser={githubUser} />
-        <ProfileRelationsBoxWrapper>
+        <FriendsBox>
           <FriendsList
             boxTitle={"Amigos"}
             followers={followers}
             filteredFollowers={followers}
           />
-        </ProfileRelationsBoxWrapper>
+        </FriendsBox>
       </PageGrid>
     </>
   );

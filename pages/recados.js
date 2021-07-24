@@ -11,10 +11,10 @@ import { AlurakutMenu } from "../src/lib/AlurakutCommons";
 import DatoCMSService from "../src/api/datocmsService";
 import GitHubService from "../src/api/githubService";
 
-export default function ScrapsPage(props) {
+export default function RecadosPage(props) {
   const githubUser = props.githubUser;
-  const [scraps, setScraps] = useState([]);
   const [username, setUsername] = useState([]);
+  const [scraps, setScraps] = useState([]);
 
   useEffect(() => {
     GitHubService.getUsername(githubUser).then((name) => setUsername(name));
@@ -41,7 +41,7 @@ export default function ScrapsPage(props) {
               image={username.avatar_url}
               url={username.html_url}
             />
-          </ScrapsBox>
+          </ScrapsBox>  
           <Box>
             <h2 className="subTitle">Deixar um recado</h2>
             <ScrapForm scraps={scraps} setScraps={setScraps} />

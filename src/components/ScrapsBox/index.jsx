@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Box from "../Box";
 
-
 export const ScrapsBox = styled(Box)`
 ul {
   display: flex;
@@ -63,3 +62,5 @@ ul li a {
 
 }
 `;
+
+export default ScrapsBox;

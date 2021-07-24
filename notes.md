@@ -219,9 +219,8 @@ fetch('url que queremos acessar').then()
 - [x] "Ver todos": direcionar para as páginas acima
 - [] Criar página de perfil do usuário (usar rotas Next.js com id)
 - [] Criar página de comunidade (usar rotas Next.js com id)
-- [] Validação do campo de login (mensagem de erro)
 - [] Tema claro e tema escuro
-- [] Adicionar favicon
+- [] Adicionar favicon e novo logo/nome (devkut)
 - [] Refatorar código e pastas
 - [] Deixar o README.md bonitão
 

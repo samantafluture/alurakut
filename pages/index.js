@@ -25,7 +25,7 @@ export default function Home(props) {
   const [followers, setFollowers] = useState([]);
   const [comunidades, setComunidades] = useState([]);
   const [scraps, setScraps] = useState([]);
-  // const filteredFollowers = followers.slice(0, 6);
+  const filteredFollowers = followers.slice(0, 6);
 
   useEffect(() => {
     GitHubService.getUsername(githubUser).then((name) => setUsername(name));
@@ -98,11 +98,11 @@ export default function Home(props) {
           style={{ gridArea: "profileRelationsArea" }}
         >
           <ProfileRelationsBoxWrapper>
-            {/* <FriendsList
+            <FriendsList
               boxTitle={"Amigos"}
               followers={followers}
               filteredFollowers={filteredFollowers}
-            /> */}
+            />
             <hr />
             <a className="boxLink" href={`/amigos`}>
               Ver todos
