@@ -30,7 +30,6 @@ export default function Home(props) {
   const [comunidades, setComunidades] = useState([]);
   const [scraps, setScraps] = useState([]);
   const filteredFollowers = followers.slice(0, 6);
-  const filteredComunidades = comunidades.slice(0, 6);
 
   useEffect(() => {
     GitHubService.getUsername(githubUser).then((data) => {
@@ -41,7 +40,7 @@ export default function Home(props) {
     GitHubService.getFollowers(githubUser).then((data) => {
       const allFollowers = data;
       setFollowers(allFollowers);
-  });
+    });
 
     DatoCMSService.getCommunities().then((data) => {
       const allCommunities = data.data.allCommunities;
@@ -98,7 +97,7 @@ export default function Home(props) {
               name={username.login}
               image={username.avatar_url}
             />
-            <BoxLink />
+            <BoxLink url={`/recados`} linkTitlte={"Ver todos"} />
           </ScrapsBox>
         </div>
         <div
@@ -111,15 +110,14 @@ export default function Home(props) {
               followers={followers}
               filteredFollowers={filteredFollowers}
             />
-            <BoxLink />
+            <BoxLink url={`/amigos`} linkTitlte={"Ver todos"} />
           </ProfileRelationsBoxWrapper>
           <ProfileRelationsBoxWrapper>
             <CommunitiesList
               boxTitle={"Comunidades"}
               comunidades={comunidades}
-              filteredComunidades={filteredComunidades}
             />
-            <BoxLink />
+            <BoxLink url={`/comunidades`} linkTitlte={"Ver todos"} />
           </ProfileRelationsBoxWrapper>
         </div>
       </MainGrid>

@@ -1,9 +1,9 @@
-export default function BoxLink() {
+export default function BoxLink({ url, linkTitlte }) {
   return (
     <>
       <hr />
-      <a className="boxLink" href={`/recados`}>
-        Ver todos
+      <a className="boxLink" href={url}>
+        {linkTitlte}
       </a>
     </>
   );

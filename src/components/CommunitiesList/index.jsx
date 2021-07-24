@@ -1,7 +1,9 @@
 import React from "react";
 import RelationsItem from "../RelationsItem";
 
-export default function CommunitiesList({ comunidades, filteredComunidades, boxTitle }) {
+export default function CommunitiesList({ comunidades, boxTitle }) {
+  
+  
   return (
     <>
       <h2 className="smallTitle">
@@ -11,7 +13,7 @@ export default function CommunitiesList({ comunidades, filteredComunidades, boxT
         </a>
       </h2>
       <ul>
-        {filteredComunidades.map((comunidade) => {
+        {comunidades.map((comunidade) => {
           return (
             <RelationsItem
               id={comunidade.id}
