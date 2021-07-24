@@ -1,5 +1,8 @@
 # Devkut
 
+Acesse:
+[Devkut](https://alurakut-samanta.vercel.app/)
+
 ## Sobre o projeto 💬
 
 O Devkut é uma aplicação web que clona algumas das funcionalidades do saudoso Orkut 🤓, através de uma interface mais moderna. 
@@ -49,4 +52,4 @@ Para testar basta baixar e executar o comando:
 ## No Ar
 
 Acompanhe a construção do projeto:
-[Alurakut](https://alurakut-samanta.vercel.app/)
+[Devkut](https://alurakut-samanta.vercel.app/)
