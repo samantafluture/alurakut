@@ -217,12 +217,20 @@ fetch('url que queremos acessar').then()
 - [x] Acrescentar dados do githubUser: local e bio
 - [x] Criar páginas que listam todas as comunidades e todos os amigos
 - [x] "Ver todos": direcionar para as páginas acima
-- [] Criar página de perfil do usuário (usar rotas Next.js com id)
-- [] Criar página de comunidade (usar rotas Next.js com id)
+- [X] Criar página de perfil do usuário (usar rotas Next.js com id)
 - [] Tema claro e tema escuro
 - [] Adicionar favicon e novo logo/nome (devkut)
 - [] Refatorar código e pastas
 - [] Deixar o README.md bonitão
+
+---
+
+# Bugs & To Do's
+
+- [] Puxar "comunidades" e "recados" do usuário logado
+- [] Puxar todos os followers do GitHub (+ de 30)
+- [] Criar página de comunidade (usar rotas Next.js com id)
+- [] Fazer sistema de membros das comunidades
 
 ---
 

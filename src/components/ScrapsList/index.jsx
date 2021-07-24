@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function ScrapsList({ scraps, boxTitle }) {
   return (
@@ -13,10 +14,12 @@ export default function ScrapsList({ scraps, boxTitle }) {
         {scraps.map((scrap) => {
           return (
             <li key={scrap.id}>
-              <a href={`/users/${scrap.creatorSlug}`}>
-                <img src={`https://github.com/${scrap.creatorSlug}.png`} />
-                <span>{scrap.creatorSlug}</span>
-              </a>
+              <Link href={`/profile/${scrap.creatorSlug}`} passHref>
+                <a>
+                  <img src={`https://github.com/${scrap.creatorSlug}.png`} />
+                  <span>{scrap.creatorSlug}</span>
+                </a>
+              </Link>
               <p>{scrap.text}</p>
             </li>
           );
@@ -25,4 +28,3 @@ export default function ScrapsList({ scraps, boxTitle }) {
     </>
   );
 }
-

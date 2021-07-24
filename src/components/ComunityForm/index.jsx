@@ -29,7 +29,7 @@ export default function CommunityForm({
           }).then(async (response) => {
             const dados = await response.json();
             const comunidade = dados.registroCriado;
-            const comunidadesAtualizadas = [...comunidades, comunidade];
+            const comunidadesAtualizadas = [comunidade, ...comunidades];
             setComunidades(comunidadesAtualizadas);
           });
         }}

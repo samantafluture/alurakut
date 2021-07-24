@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import nookies from "nookies";
 import jwt from "jsonwebtoken";
-import PageGrid from "../src/components/PageGrid";
-import ProfileSidebar from "../src/components/ProfileSidebar";
-import ScrapsBox from "../src/components/ScrapsBox";
-import ScrapsList from "../src/components/ScrapsList";
-import Box from "../src/components/Box";
-import ScrapForm from "../src/components/ScrapForm";
-import { AlurakutMenu } from "../src/lib/AlurakutCommons";
-import DatoCMSService from "../src/api/datocmsService";
-import GitHubService from "../src/api/githubService";
+import PageGrid from "../../src/components/PageGrid";
+import ProfileSidebar from "../../src/components/ProfileSidebar";
+import ScrapsBox from "../../src/components/ScrapsBox";
+import ScrapsList from "../../src/components/ScrapsList";
+import Box from "../../src/components/Box";
+import ScrapForm from "../../src/components/ScrapForm";
+import { AlurakutMenu } from "../../src/lib/AlurakutCommons";
+import DatoCMSService from "../../src/api/datocmsService";
+import GitHubService from "../../src/api/githubService";
 
 export default function RecadosPage(props) {
   const githubUser = props.githubUser;

@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import nookies from "nookies";
 import jwt from "jsonwebtoken";
-import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
-import MainGrid from "../src/components/MainGrid";
-import Box from "../src/components/Box";
-import ProfileSidebar from "../src/components/ProfileSidebar";
-import ProfileBio from "../src/components/ProfileBio";
-import FriendsList from "../src/components/FriendsList";
-import CommunitiesList from "../src/components/CommunitiesList";
-import ScrapsList from "../src/components/ScrapsList";
-import CommunityForm from "../src/components/ComunityForm";
-import ScrapForm from "../src/components/ScrapForm";
-import { ScrapsBox } from "../src/components/ScrapsBox";
-import GitHubService from "../src/api/githubService";
-import DatoCMSService from "../src/api/datocmsService";
+import { ProfileRelationsBoxWrapper } from "../../src/components/RelationsSidebar";
+import MainGrid from "../../src/components/MainGrid";
+import Box from "../../src/components/Box";
+import ProfileSidebar from "../../src/components/ProfileSidebar";
+import ProfileBio from "../../src/components/ProfileBio";
+import FriendsList from "../../src/components/FriendsList";
+import CommunitiesList from "../../src/components/CommunitiesList";
+import ScrapsList from "../../src/components/ScrapsList";
+import CommunityForm from "../../src/components/ComunityForm";
+import ScrapForm from "../../src/components/ScrapForm";
+import { ScrapsBox } from "../../src/components/ScrapsBox";
+import GitHubService from "../../src/api/githubService";
+import DatoCMSService from "../../src/api/datocmsService";
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
-} from "../src/lib/AlurakutCommons";
+} from "../../src/lib/AlurakutCommons";
 
-export default function Home(props) {
-  const githubUser = props.githubUser;
+export default function ProfilePage() {
+  const router = useRouter();
+  const { user } = router.query;
+  const githubUser = user;
   const [username, setUsername] = useState([]);
   const [followers, setFollowers] = useState([]);
   const [comunidades, setComunidades] = useState([]);
@@ -148,8 +151,6 @@ export async function getServerSideProps(context) {
   const { githubUser } = jwt.decode(token);
 
   return {
-    props: {
-      githubUser: githubUser,
-    },
+    props: {},
   };
 }

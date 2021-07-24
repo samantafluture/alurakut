@@ -16,7 +16,7 @@ export default function FriendsList({ followers, filteredFollowers, boxTitle }) 
           return (
             <RelationsItem
               id={follower.login}
-              url={follower.html_url}
+              url={`/profile/${follower.login}`}
               title={follower.login}
               image={follower.avatar_url}
             />

@@ -4,12 +4,13 @@ import Box from "../Box";
 export const BioBox = styled(Box)`
   p {
     padding: 10px;
-    margin: 12px 0 0 0;
+    margin-top: 12px;
     color: #333333;
     width: 100%;
     border-radius: 8px;
     font-size: 0.85rem;
     background-color: #f1f9fe;
+    box-sizing: border-box;
   }
 `;
 

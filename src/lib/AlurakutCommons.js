@@ -21,7 +21,7 @@ export function AlurakutMenu({ githubUser }) {
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
       <div className="container">
-        <AlurakutMenu.Logo src={`${BASE_URL}/logo.svg`} />
+        <AlurakutMenu.Logo src="../assets/logo-devkut.svg" />
 
         <nav style={{ flex: 1 }}>
           {[
@@ -306,7 +306,7 @@ export function OrkutNostalgicIconSet(props) {
   );
 }
 OrkutNostalgicIconSet.List = styled.ul`
-  margin-top: 0px;
+  margin: 0px;
   padding: 16px;
   list-style: none;
   display: flex;

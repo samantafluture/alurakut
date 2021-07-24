@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import nookies from "nookies";
 import jwt from "jsonwebtoken";
-import PageGrid from "../src/components/PageGrid";
-import ProfileSidebar from "../src/components/ProfileSidebar";
-import FriendsList from "../src/components/FriendsList";
-import FriendsBox from "../src/components/FriendsBox";
-import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
-import { AlurakutMenu } from "../src/lib/AlurakutCommons";
-import GitHubService from "../src/api/githubService";
+import PageGrid from "../../src/components/PageGrid";
+import ProfileSidebar from "../../src/components/ProfileSidebar";
+import FriendsList from "../../src/components/FriendsList";
+import FriendsBox from "../../src/components/FriendsBox";
+import { ProfileRelationsBoxWrapper } from "../../src/components/RelationsSidebar";
+import { AlurakutMenu } from "../../src/lib/AlurakutCommons";
+import GitHubService from "../../src/api/githubService";
 
 export default function AmigosPage(props) {
   const githubUser = props.githubUser;

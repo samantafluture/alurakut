@@ -5,6 +5,7 @@ const Box = styled.div`
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 10px;
+  box-sizing: border-box;
 
   .boxLink {
     font-size: 14px;

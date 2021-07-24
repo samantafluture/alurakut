@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import nookies from "nookies";
 import jwt from "jsonwebtoken";
-import PageGrid from "../src/components/PageGrid";
-import ProfileSidebar from "../src/components/ProfileSidebar";
-import CommunitiesList from "../src/components/CommunitiesList";
-import { ProfileRelationsBoxWrapper } from "../src/components/RelationsSidebar";
-import { AlurakutMenu } from "../src/lib/AlurakutCommons";
-import Box from "../src/components/Box";
-import CommunityForm from "../src/components/ComunityForm";
-import DatoCMSService from "../src/api/datocmsService";
+import PageGrid from "../../src/components/PageGrid";
+import ProfileSidebar from "../../src/components/ProfileSidebar";
+import CommunitiesList from "../../src/components/CommunitiesList";
+import { ProfileRelationsBoxWrapper } from "../../src/components/RelationsSidebar";
+import { AlurakutMenu } from "../../src/lib/AlurakutCommons";
+import Box from "../../src/components/Box";
+import CommunityForm from "../../src/components/ComunityForm";
+import DatoCMSService from "../../src/api/datocmsService";
 
 export default function ComunidadesPage(props) {
   const githubUser = props.githubUser;
