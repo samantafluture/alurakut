@@ -1,7 +1,7 @@
 # Devkut
 
 Acesse:
-[Devkut](https://alurakut-samanta.vercel.app/)
+[Devkut](https://devkut-samanta.vercel.app/)
 
 ## Sobre o projeto 💬
 
@@ -53,4 +53,4 @@ Para testar basta baixar e executar o comando:
 ## No Ar
 
 Acompanhe a construção do projeto:
-[Devkut](https://alurakut-samanta.vercel.app/)
+[Devkut](https://devkut-samanta.vercel.app/)
